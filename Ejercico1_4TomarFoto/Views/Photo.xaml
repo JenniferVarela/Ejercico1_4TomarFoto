@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Convertidor="clr-namespace:Ejercico1_4TomarFoto.Converter"
+             x:Class="Ejercico1_4TomarFoto.Views.Photo">
+
+    <ContentPage.Resources>
+        <!--recurso de diccionario-->
+        <ResourceDictionary>
+            <!--se usa para disparar la funcion que ya tenemos-->
+            <Convertidor:ByteArrayToImage x:Key="ByteToImage"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding descripcion}" x:Name="lbDescripcion"/>
+            <Image x:Name="mostrarFoto " Source="{Binding foto, Converter={StaticResource ByteToImage}}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

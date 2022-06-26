@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercico1_4TomarFoto.MainPage">
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Ejercicio 1.4" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Image  x:Name="foto" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        <Button Text="Tomar Foto" x:Name="btntomarFoto" Clicked="tomarFoto_Clicked" />
+        <Label Text="Nombre"/>
+        <Entry x:Name="txtNombre" Text="{Binding nombre}"/>
+        <Label Text="Descripcion:"/>
+        <Entry x:Name="txtDescripcion" Text="{Binding descripcion}"/>
+        <Button Text="Guardar" x:Name="btnGuardar" Clicked="btnGuardar_Clicked"/>
+        <Button Text="Listar Fotos" x:Name="btnListar" Clicked="btnListar_Clicked"/>
+
+    </StackLayout>
+
+</ContentPage>
